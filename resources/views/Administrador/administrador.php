@@ -21,7 +21,7 @@
                 <ul>
                     <li> <a href="#"> <i class="fas fa-search"></i> </a> </li>
                     <li> <a href="#"> <i class="fas fa-bell"></i> </a> </li>
-                    <li> <a href="#"> <i class="fas fa-power-off"></i> </a> </li>
+                    <li> <a href="Home"> <i class="fas fa-power-off"></i> </a> </li>
                 </ul>
              </div>
         </div>
@@ -32,10 +32,14 @@
                     <img src="./images/perfil.jpg" alt="">
                     <p>Jehanpíero</p>
                 </center>
-                <li class="item">
-                    <a href="#" class="menu-btn">
-                        <i class="fas fa-desktop"></i><span>Tablero</span>
+                <li class="item" id="payment">
+                    <a href="#payment" class="menu-btn">
+                        <i class="fas fa-desktop"></i><span>Tablero <i class="fas fa-chevron-down drop-dow"></i></span>
                     </a>
+                    <div class="sub-menu">
+                        <a href="#"><i class="fas fa-money-check"></i><span>Pagos</span></a>
+                        <a href="#"><i class="fas fa-clipboard"></i><span>Reportes</span></a>
+                    </div>
                 </li>
                 <li class="item" id="profile">
                     <a href="#profile" class="menu-btn">
@@ -46,6 +50,15 @@
                         <a href="#"><i class="fas fa-address-card"></i><span>Informacion</span></a>
                     </div>
                 </li>
+                <li class="item" id="register">
+                    <a href="#register" class="menu-btn">
+                        <i class="fas fa-folder-plus"></i><span>Registros <i class="fas fa-chevron-down drop-dow"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#"><i class="fas fa-house-user"></i><span>Registro Propiedad</span></a>
+                        <a href="#"><i class="fas fa-user-friends"></i><span>Registro Usuario</span></a>
+                    </div>
+                </li>
                 <li class="item" id="messages">
                     <a href="#messages" class="menu-btn">
                         <i class="fas fa-envelope"></i><span>Mensajes <i class="fas fa-chevron-down drop-dow"></i></span>
@@ -54,6 +67,16 @@
                         <a href="#"><i class="fas fa-envelope"></i><span>Nuevo</span></a>
                         <a href="#"><i class="fas fa-envelope-square"></i><span>Informacion</span></a>
                         <a href="#"><i class="fas fa-exclamation-circle"></i><span>Spam</span></a>
+                    </div>
+                </li>
+                <li class="item" id="document">
+                    <a href="#document" class="menu-btn">
+                        <i class="fas fa-file-alt"></i><span>Documentos <i class="fas fa-chevron-down drop-dow"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#"><i class="fas fa-id-card-alt"></i><span>Tipo De Documento</span></a>
+                        <a href="#"><i class="fas fa-money-check-alt"></i><span>Tipo De Pago</span></a>
+                        <a href="#"><i class="fas fa-home"></i><span>Tipo De Propiedad</span></a>
                     </div>
                 </li>
                 <li class="item" id="settings">

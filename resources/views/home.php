@@ -19,7 +19,7 @@
                     <li ><a href="Estatuto">Estatuto</a></li>
                 </ul>
             </nav>
-            <button>Iniciar Sesion</button>
+            <a href="Administrador"><input type="button" value="Iniciar Sesion"></a>
         </div>
     </header>
 

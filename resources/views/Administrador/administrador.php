@@ -18,11 +18,15 @@
                 <div class="sidebar-btn">
                 <i class="fas fa-bars"></i>
                 </div>
-                <ul>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> </li>
-                    <li> <a href="#"> <i class="fas fa-bell"></i> </a> </li>
-                    <li> <a href="Home"> <i class="fas fa-power-off"></i> </a> </li>
-                </ul>
+                <li class="item" id="profile">
+                    <a href="#profile" class="menu-btn">
+                        <i class="fas fa-user-circle"></i><span>Perfil <i class="fas fa-chevron-down drop-dow"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#"><i class="fas fa-image"></i><span>Imagen</span></a>
+                        <a href="#"><i class="fas fa-address-card"></i><span>Informacion</span></a>
+                    </div>
+                </li>
              </div>
         </div>
         
@@ -41,21 +45,12 @@
                         <a href="#"><i class="fas fa-clipboard"></i><span>Reportes</span></a>
                     </div>
                 </li>
-                <li class="item" id="profile">
-                    <a href="#profile" class="menu-btn">
-                        <i class="fas fa-user-circle"></i><span>Perfil <i class="fas fa-chevron-down drop-dow"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"><i class="fas fa-image"></i><span>Imagen</span></a>
-                        <a href="#"><i class="fas fa-address-card"></i><span>Informacion</span></a>
-                    </div>
-                </li>
                 <li class="item" id="register">
                     <a href="#register" class="menu-btn">
                         <i class="fas fa-folder-plus"></i><span>Registros <i class="fas fa-chevron-down drop-dow"></i></span>
                     </a>
                     <div class="sub-menu">
-                        <a href="#"><i class="fas fa-house-user"></i><span>Registro Propiedad</span></a>
+                        <a href="Propiedad"><i class="fas fa-house-user"></i><span>Registro Propiedad</span></a>
                         <a href="#"><i class="fas fa-user-friends"></i><span>Registro Usuario</span></a>
                     </div>
                 </li>
@@ -74,9 +69,9 @@
                         <i class="fas fa-file-alt"></i><span>Documentos <i class="fas fa-chevron-down drop-dow"></i></span>
                     </a>
                     <div class="sub-menu">
-                        <a href="#"><i class="fas fa-id-card-alt"></i><span>Tipo De Documento</span></a>
+                        <a href="Tipo_Documento"><i class="fas fa-id-card-alt"></i><span>Tipo De Documento</span></a>
                         <a href="#"><i class="fas fa-money-check-alt"></i><span>Tipo De Pago</span></a>
-                        <a href="#"><i class="fas fa-home"></i><span>Tipo De Propiedad</span></a>
+                        <a href="Tipo_Propiedad"><i class="fas fa-home"></i><span>Tipo De Propiedad</span></a>
                     </div>
                 </li>
                 <li class="item" id="settings">
@@ -91,6 +86,11 @@
                 <li class="item">
                     <a href="#" class="menu-btn">
                         <i class="fas fa-info-circle"></i><span>Acerca De</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="Iniciar_Sesion" class="menu-btn">
+                        <i class="fas fa-door-open"></i><span>Cerrar Sesion</span>
                     </a>
                 </li>
             </div>

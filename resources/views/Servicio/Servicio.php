@@ -19,32 +19,50 @@
                     <li ><a href="Estatuto">Estatuto</a></li>
                 </ul>
             </nav>
-            <button>Iniciar Sesion</button>
+            <a href="Iniciar_Sesion"><input type="button" value="Iniciar Sesion"></a>
         </div>
     </header>
 
     <main class="main">
-        <div class="container">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
 
-        <h1>Servicio</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit modi magni tempore perspiciatis quas sint odit nihil magnam accusantium voluptates dolorum voluptatum inventore corporis velit, tenetur sit ipsa, corrupti laboriosam.
-            </p>
+                    <div class="slide first">
+                        <img src="/images/perfil.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/perfil.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/perfil.jpg" alt="">
+                    </div>
 
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit modi magni tempore perspiciatis quas sint odit nihil magnam accusantium voluptates dolorum voluptatum inventore corporis velit, tenetur sit ipsa, corrupti laboriosam.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit modi magni tempore perspiciatis quas sint odit nihil magnam accusantium voluptates dolorum voluptatum inventore corporis velit, tenetur sit ipsa, corrupti laboriosam.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit modi magni tempore perspiciatis quas sint odit nihil magnam accusantium voluptates dolorum voluptatum inventore corporis velit, tenetur sit ipsa, corrupti laboriosam.
-            </p>
-        </div>
-    </main>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                </div>
+                <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                </div>               
+            </div>
+            <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter > 4){
+                    counter = 1;
+                }
+            }, 5000);
+            </script>
+</main>
 
     <footer class="footer">
         <div class="container">

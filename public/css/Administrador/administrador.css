@@ -37,6 +37,7 @@ body{
     font-weight: 900;
 }
 
+
 .wrapper .header .header-menu .title span{
     color: #4CCEEB;
 }
@@ -52,12 +53,14 @@ body{
     transition-property: color;
 }
 
+
+
 .wrapper .header .header-menu .sidebar-btn:hover{
     color: #4CCEEB;
 }
 
 .wrapper .header .header-menu ul{
-    display: flex;
+    display: flex;;
 }
 
 .wrapper .header .header-menu ul li a{

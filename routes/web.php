@@ -19,21 +19,22 @@ Route::get('Personal','Web\PersonalController@index');
 Route::get('Deudas','Web\FormDeudasController@index');
 Route::get('Pagar','Web\FormPagarController@index');
 Route::get('Pago','Web\ProPagoController@index');
-Route::get('Login','Web\LoginController@index');
+Route::get('Iniciar_Sesion','Web\LoginController@index');
 Route::get('Estatuto','Web\EstatutoController@index');
 
 //Adminsitrador
 Route::get('Administrador','Web\Administrador\AdministradorController@index');
 Route::get('Info','Web\Administrador\InfoController@index');
-Route::get('Pago','Web\Administrador\PagoController@index');
-Route::get('Registrar_Propiedad','Web\Administrador\RegistrarPropiedadController@index');
-Route::get('Registrar_Usuario','Web\Administrador\RegistrarUsuarioController@index');
-Route::get('Tipo_Documento','Web\Administrador\Tipo_DocumentoController@index');
-Route::get('Tipo_Pago','Web\Administrador\Tipo_PagoController@index');
-Route::get('Tipo_Propiedad','Web\Administrador\Tipo_PropiedadController@index');
+Route::resource('Pago','Web\Administrador\PagoController');
+//Route::get('Registrar_Propiedad','Web\Administrador\RegistrarPropiedadController@index');
+//Route::get('Registrar_Usuario','Web\Administrador\RegistrarUsuarioController@index');
+Route::resource('Tipo_Documento','TipoDocumentoController');
+//Route::get('Tipo_Pago','Web\Administrador\Tipo_PagoController@index');
+Route::resource('Tipo_Propiedad','TipoPropiedadController');
 
 //Route::get('/', function () {
   //  return view('welcome');
 //});
 
 Route::resource("Propiedad", "PropiedadController");
+Route::resource("Usuario", "UsuarioController");

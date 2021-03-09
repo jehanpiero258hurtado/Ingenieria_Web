@@ -14,7 +14,9 @@ class CreateTipoPropiedadsTable extends Migration
     public function up()
     {
         Schema::create('tipo__propiedads', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('Descripcion');
+            $table->decimal('Pago', 8,2);
             $table->timestamps();
         });
     }

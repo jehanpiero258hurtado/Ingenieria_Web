@@ -14,7 +14,9 @@ class TipoPropiedadController extends Controller
      */
     public function index()
     {
-        //
+        $lista_t_propiedads = Tipo_Propiedad::all();
+        $data = array("lista_t_propiedads" => $lista_t_propiedads);
+        return response()->view("Administrador/Tipo_Propiedad/index",$data,200);
     }
 
     /**
@@ -24,7 +26,10 @@ class TipoPropiedadController extends Controller
      */
     public function create()
     {
-        //
+        $lista_t_propiedads = Tipo_Propiedad::all();
+        $data=array();
+        return response()->view("Administrador/Tipo_Propiedad/create");
+            
     }
 
     /**
@@ -35,7 +40,13 @@ class TipoPropiedadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Descripcion=$request->input('Descripcion');
+        $Pago=$request->input('Pago');
+        $tipo_propiedad = new Tipo_Propiedad;
+        $tipo_propiedad->Descripcion=$Descripcion;
+        $tipo_propiedad->Pago=$Pago;
+        $tipo_propiedad->save();
+        return redirect('/Tipo_Propiedad');
     }
 
     /**
@@ -55,9 +66,10 @@ class TipoPropiedadController extends Controller
      * @param  \App\Models\Tipo_Propiedad  $tipo_Propiedad
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tipo_Propiedad $tipo_Propiedad)
+    public function edit($id)
     {
-        //
+        $tipo_propiedad = Tipo_Propiedad::find($id);
+        return view('Administrador/Tipo_Propiedad.edit')->with('tipo_propiedad',$tipo_propiedad);
     }
 
     /**
@@ -67,9 +79,13 @@ class TipoPropiedadController extends Controller
      * @param  \App\Models\Tipo_Propiedad  $tipo_Propiedad
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tipo_Propiedad $tipo_Propiedad)
+    public function update(Request $request, $id)
     {
-        //
+        $tipo_propiedad = Tipo_Propiedad::find($id);
+        $tipo_propiedad->Descripcion=$request->get('Descripcion');
+        $tipo_propiedad->Pago=$request->get('Pago');
+        $tipo_propiedad->save();
+        return redirect('/Tipo_Propiedad');
     }
 
     /**
@@ -78,8 +94,10 @@ class TipoPropiedadController extends Controller
      * @param  \App\Models\Tipo_Propiedad  $tipo_Propiedad
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tipo_Propiedad $tipo_Propiedad)
+    public function destroy($id)
     {
-        //
+        $tipo_propiedad = Tipo_Propiedad::find($id);
+        $tipo_propiedad->delete();
+        return redirect('/Tipo_Propiedad');
     }
 }

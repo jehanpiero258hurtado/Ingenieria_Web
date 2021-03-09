@@ -14,7 +14,9 @@ class TipoDocumentoController extends Controller
      */
     public function index()
     {
-        //
+        $lista_t_documentos = Tipo_Documento::all();
+        $data = array("lista_t_documentos" => $lista_t_documentos);
+        return response()->view("Administrador/Tipo_Documento/index",$data,200);
     }
 
     /**
@@ -24,7 +26,8 @@ class TipoDocumentoController extends Controller
      */
     public function create()
     {
-        //
+        $data=array();
+        return response()->view("Administrador/Tipo_Documento/create", $data,200);
     }
 
     /**
@@ -35,7 +38,11 @@ class TipoDocumentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Descripcion=$request->input('Descripcion');
+        $tipo_documento = new Tipo_Documento;
+        $tipo_documento->Descripcion=$Descripcion;
+        $tipo_documento->save();
+        return redirect('/Tipo_Documento');
     }
 
     /**
@@ -55,9 +62,10 @@ class TipoDocumentoController extends Controller
      * @param  \App\Models\Tipo_Documento  $tipo_Documento
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tipo_Documento $tipo_Documento)
+    public function edit($id)
     {
-        //
+        $tipo_documento = Tipo_Documento::find($id);
+        return view('Administrador/Tipo_Documento.edit')->with('tipo_documento',$tipo_documento);
     }
 
     /**
@@ -67,9 +75,12 @@ class TipoDocumentoController extends Controller
      * @param  \App\Models\Tipo_Documento  $tipo_Documento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tipo_Documento $tipo_Documento)
+    public function update(Request $request, $id)
     {
-        //
+        $tipo_documento = Tipo_Documento::find($id);
+        $tipo_documento->Descripcion=$request->get('Descripcion');
+        $tipo_documento->save();
+        return redirect('/Tipo_Documento');
     }
 
     /**
@@ -78,8 +89,10 @@ class TipoDocumentoController extends Controller
      * @param  \App\Models\Tipo_Documento  $tipo_Documento
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tipo_Documento $tipo_Documento)
+    public function destroy($id)
     {
-        //
+        $tipo_documento = Tipo_Documento::find($id);
+        $tipo_documento->delete();
+        return redirect('/Tipo_Documento');
     }
 }

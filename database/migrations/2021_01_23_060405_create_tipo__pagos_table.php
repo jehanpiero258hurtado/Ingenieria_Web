@@ -14,7 +14,8 @@ class CreateTipoPagosTable extends Migration
     public function up()
     {
         Schema::create('tipo__pagos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('Descripcion');
             $table->timestamps();
         });
     }

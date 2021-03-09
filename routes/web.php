@@ -38,3 +38,4 @@ Route::resource('Tipo_Propiedad','TipoPropiedadController');
 
 Route::resource("Propiedad", "PropiedadController");
 Route::resource("Usuario", "UsuarioController");
+Route::resource("Tipo_Pago", "TipoPagoController");

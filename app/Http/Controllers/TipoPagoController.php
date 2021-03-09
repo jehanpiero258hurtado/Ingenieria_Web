@@ -14,7 +14,9 @@ class TipoPagoController extends Controller
      */
     public function index()
     {
-        //
+        $lista_t_pagos = Tipo_Pago::all();
+        $data = array("lista_t_pagos" => $lista_t_pagos);
+        return response()->view("Administrador/Tipo_Pago/index",$data,200);
     }
 
     /**
@@ -24,7 +26,8 @@ class TipoPagoController extends Controller
      */
     public function create()
     {
-        //
+        $data=array();
+        return response()->view("Administrador/Tipo_Pago/create", $data,200);
     }
 
     /**
@@ -35,7 +38,11 @@ class TipoPagoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Descripcion=$request->input('Descripcion');
+        $tipo_Pago = new Tipo_Pago;
+        $tipo_Pago->Descripcion=$Descripcion;
+        $tipo_Pago->save();
+        return redirect('/Tipo_Pago');
     }
 
     /**
@@ -55,9 +62,10 @@ class TipoPagoController extends Controller
      * @param  \App\Models\Tipo_Pago  $tipo_Pago
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tipo_Pago $tipo_Pago)
+    public function edit($id)
     {
-        //
+        $tipo_pago = Tipo_Pago::find($id);
+        return view('Administrador/Tipo_Pago.edit')->with('tipo_pago',$tipo_pago);
     }
 
     /**
@@ -67,9 +75,12 @@ class TipoPagoController extends Controller
      * @param  \App\Models\Tipo_Pago  $tipo_Pago
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tipo_Pago $tipo_Pago)
+    public function update(Request $request,$id)
     {
-        //
+        $tipo_pago = Tipo_Pago::find($id);
+        $tipo_pago->Descripcion=$request->get('Descripcion');
+        $tipo_pago->save();
+        return redirect('/Tipo_Pago');
     }
 
     /**
@@ -78,8 +89,10 @@ class TipoPagoController extends Controller
      * @param  \App\Models\Tipo_Pago  $tipo_Pago
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tipo_Pago $tipo_Pago)
+    public function destroy($id)
     {
-        //
+        $tipo_pago= Tipo_Pago::find($id);
+        $tipo_pago->delete();
+        return redirect('/Tipo_Pago');
     }
 }

@@ -2,31 +2,32 @@
 
 @section('contenido')
 <!-- <div class="shadow-lg p-3 mb-5 bg-white rounded"><h3>Contenido de INDEX</h3></div> -->
-<a href="Propiedad/create" class="btn btn-primary">CREAR</a>
-
-
-<table class="table table-dark table-striped mt-4">
-  <thead>
+<h2 class="referencia">Propiedades Agregadas</h2>
+        <div class ="card">
+        <a href="Propiedad/create" class="menu-btn"  style="color:#FFF;font-size:15px;font-weight: bold;">CREAR</a>
+          <div class="container">
+     <table id="table" class="table" >
+    <thead class="fila">
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Propiedad</th>
-      <th scope="col">Tipo De Documento</th>
-      <th scope="col">Numero De Documento</th>
-      <th scope="col">Celular</th>
-      <th scope="col">Manzana</th>
-      <th scope="col">Lote</th>
-      <th scope="col">Numero De Suministro</th>
-      <th scope="col">Tipo De Propiedad</th>
-      <th scope="col">Fecha De Inscripcion</th>
-      <th scope="col">Pago Mensual</th>
-      <th scope="col">Pago Por Reconeccion</th>
-      <th scope="col">Estado</th> 
-      <th scope="col">Acciones</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">ID</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Propiedad</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Tipo De Documento</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Numero De Documento</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Celular</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Manzana</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Lote</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Numero De Suministro</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Tipo De Propiedad</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Fecha De Inscripcion</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Pago Mensual</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Pago Por Reconeccion</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Estado</th> 
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Acciones</th>
     </tr>
   </thead>
   <tbody>    
     @foreach ($lista_propiedads as $lista_propiedad)
-    <tr>
+    <tr class="fila1">
         <td>{{$lista_propiedad->id}}</td>
         <td>{{$lista_propiedad->Propietario}}</td>
         @foreach($lista_t_documentos as $lista_t_documento)
@@ -46,15 +47,16 @@
         <td>{{$lista_propiedad->Estado}}</td>
         <td>  
         <form action="{{ route('Propiedad.destroy',$lista_propiedad->id) }}" method="POST">
-            <a href="/Propiedad/{{$lista_propiedad->id}}/edit" class="btn btn-info">Editar</a>
+            <a href="/Propiedad/{{$lista_propiedad->id}}/edit" class="btn btn-info" style="color:#FFF;font-size:15px;font-weight: bold;">Editar</a>
             @csrf
               @method('DELETE')
-            <button class="btn btn-danger">Borrar</button>
+            <button class="btn btn-danger" style="color:#FFF;font-size:15px;font-weight: bold;">Borrar</button>
             </form>  
         </td>        
     </tr>
     @endforeach
   </tbody>
 </table>
-
+</div>
+</div>
 @endsection

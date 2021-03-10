@@ -1,7 +1,8 @@
 @extends('layouts.plantillabase')
 
 @section('contenido')
-<h2>EDITAR REGISTROS</h2>
+<h2 class="referencia">Editar Usuario</h2>
+<div class="formulario">
 
 <form action="/Usuario/{{$usuario->id}}" method="POST">
     @csrf    
@@ -50,9 +51,10 @@
     <label for="" class="form-label">Contraseña</label>
     <input id="Contrasena" name="Contrasena" type="password" class="form-control" value="{{$usuario->Contrasena}}">    
   </div>
-  <a href="/Usuario" class="btn btn-secondary">Cancelar</a>
-  <button type="submit" class="btn btn-primary">Guardar</button>
+  <a href="/Usuario" class="btn btn-secondary" style="color:#FFF;font-size:15px;font-weight: bold;">Cancelar</a>
+  <button type="submit" class="btn btn-primary" style="color:#FFF;font-size:15px;font-weight: bold;">Guardar</button>
 
 </form>
+</div>
 
 @endsection

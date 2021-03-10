@@ -1,7 +1,8 @@
 @extends('layouts.plantillabase')
 
 @section('contenido')
-<h2>EDITAR REGISTROS</h2>
+<h2 class="referencia">Editar Tipo De Propiedad</h2>
+<div class="formulario">
 
 <form action="/Propiedad/{{$propiedad->id}}" method="POST">
     @csrf    
@@ -69,9 +70,10 @@
       <option value="Inactivo">Inactivo </option>
     </select>      
   </div>
-  <a href="/Propiedad" class="btn btn-secondary">Cancelar</a>
-  <button type="submit" class="btn btn-primary">Guardar</button>
+  <a href="/Propiedad" class="btn btn-secondary" style="color:#FFF;font-size:15px;font-weight: bold;">Cancelar</a>
+  <button type="submit" class="btn btn-primary" style="color:#FFF;font-size:15px;font-weight: bold;">Guardar</button>
 
 </form>
+</div>
 
 @endsection

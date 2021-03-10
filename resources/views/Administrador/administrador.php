@@ -51,7 +51,7 @@
                     </a>
                     <div class="sub-menu">
                         <a href="Propiedad"><i class="fas fa-house-user"></i><span>Registro Propiedad</span></a>
-                        <a href="#"><i class="fas fa-user-friends"></i><span>Registro Usuario</span></a>
+                        <a href="Usuario"><i class="fas fa-user-friends"></i><span>Registro Usuario</span></a>
                     </div>
                 </li>
                 <li class="item" id="messages">
@@ -70,7 +70,7 @@
                     </a>
                     <div class="sub-menu">
                         <a href="Tipo_Documento"><i class="fas fa-id-card-alt"></i><span>Tipo De Documento</span></a>
-                        <a href="#"><i class="fas fa-money-check-alt"></i><span>Tipo De Pago</span></a>
+                        <a href="Tipo_Pago"><i class="fas fa-money-check-alt"></i><span>Tipo De Pago</span></a>
                         <a href="Tipo_Propiedad"><i class="fas fa-home"></i><span>Tipo De Propiedad</span></a>
                     </div>
                 </li>

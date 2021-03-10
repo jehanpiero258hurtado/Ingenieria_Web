@@ -2,29 +2,30 @@
 
 @section('contenido')
 <!-- <div class="shadow-lg p-3 mb-5 bg-white rounded"><h3>Contenido de INDEX</h3></div> -->
-<a href="Usuario/create" class="btn btn-primary">CREAR</a>
-
-
-<table class="table table-dark table-striped mt-4">
-  <thead>
+<h2 class="referencia">Usuarios Agregados</h2>
+        <div class ="card">
+        <a href="Usuario/create" class="menu-btn"  style="color:#FFF;font-size:15px;font-weight: bold;">CREAR</a>
+            <div class="container">
+            <table id="table" class="table" >
+            <thead class="fila">
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido_Paterno</th>
-      <th scope="col">Apellido_Materno</th>
-      <th scope="col">Edad</th>
-      <th scope="col">Tipo_Documento</th>
-      <th scope="col">Numero_Documento</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Celular</th>
-      <th scope="col">Gestion</th>
-      <th scope="col">Contraseña</th>
-      <th scope="col">Acciones</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">ID</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Nombre</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Apellido_Paterno</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Apellido_Materno</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Edad</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Tipo_Documento</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Numero_Documento</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Direccion</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Celular</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Gestion</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Contraseña</th>
+      <th style="color:#fff;font-size:11px;font-weight: bold;">Acciones</th>
     </tr>
   </thead>
   <tbody>    
     @foreach ($lista_usuarios as $lista_usuario)
-    <tr>
+    <tr class="fila1">
         <td>{{$lista_usuario->id}}</td>
         <td>{{$lista_usuario->Nombre}}</td>
         <td>{{$lista_usuario->Apellido_Paterno}}</td>
@@ -40,15 +41,17 @@
         <td>{{$lista_usuario->Contrasena}}</td>
         <td>  
         <form action="{{ route('Usuario.destroy',$lista_usuario->id) }}" method="POST">
-            <a href="/Usuario/{{$lista_usuario->id}}/edit" class="btn btn-info">Editar</a>
+            <a href="/Usuario/{{$lista_usuario->id}}/edit" class="btn btn-info" style="color:#FFF;font-size:15px;font-weight: bold;">Editar</a>
             @csrf
               @method('DELETE')
-            <button class="btn btn-danger">Borrar</button>
+            <button class="btn btn-danger" style="color:#FFF;font-size:15px;font-weight: bold;">Borrar</button>
             </form>  
         </td>        
     </tr>
     @endforeach
   </tbody>
 </table>
+</div>
+</div>
 
 @endsection

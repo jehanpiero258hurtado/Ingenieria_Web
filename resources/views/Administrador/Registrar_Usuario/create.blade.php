@@ -1,7 +1,8 @@
 @extends('layouts.plantillabase')
 
 @section('contenido')
-<h2>CREAR REGISTROS</h2>
+<h2 class="referencia">Agregar Nuevo Usuario</h2>
+<div class="formulario">
 <form action="/Usuario" method="POST">
 @csrf
 <div class="mb-3">
@@ -48,8 +49,8 @@
     <label for="" class="form-label">Contraseña</label>
     <input id="Contrasena" name="Contrasena" type="password" class="form-control" tabindex="10">    
   </div>
-  <a href="/Usuario" class="btn btn-secondary" tabindex="13">Cancelar</a>
-  <button type="submit" class="btn btn-primary" tabindex="14">Guardar</button>
+  <a href="/Usuario" class="btn btn-secondary" tabindex="13" style="color:#FFF;font-size:15px;font-weight: bold;">Cancelar</a>
+  <button type="submit" class="btn btn-primary" tabindex="14" style="color:#FFF;font-size:15px;font-weight: bold;">Guardar</button>
 </form>
-
+</div>
 @endsection

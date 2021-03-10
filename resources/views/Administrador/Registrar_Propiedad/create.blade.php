@@ -1,7 +1,8 @@
 @extends('layouts.plantillabase')
 
 @section('contenido')
-<h2>CREAR REGISTROS</h2>
+<h2 class="referencia">Agregar Nueva Propiedad</h2>
+<div class="formulario">
 <form action="/Propiedad" method="POST">
 @csrf
   <div class="mb-3">
@@ -67,8 +68,9 @@
       <option value="Inactivo">Inactivo </option>
     </select>     
   </div>
-  <a href="/Propiedad" class="btn btn-secondary" tabindex="13">Cancelar</a>
-  <button type="submit" class="btn btn-primary" tabindex="14">Guardar</button>
+  <a href="/Propiedad" class="btn btn-secondary" tabindex="13" style="color:#FFF;font-size:15px;font-weight: bold;">Cancelar</a>
+  <button type="submit" class="btn btn-primary" tabindex="14" style="color:#FFF;font-size:15px;font-weight: bold;">Guardar</button>
 </form>
+</div>
 
 @endsection

@@ -41,7 +41,7 @@
                         <i class="fas fa-desktop"></i><span>Tablero <i class="fas fa-chevron-down drop-dow"></i></span>
                     </a>
                     <div class="sub-menu">
-                        <a href="#"><i class="fas fa-money-check"></i><span>Pagos</span></a>
+                        <a href="Pago"><i class="fas fa-money-check"></i><span>Pagos</span></a>
                         <a href="#"><i class="fas fa-clipboard"></i><span>Reportes</span></a>
                     </div>
                 </li>

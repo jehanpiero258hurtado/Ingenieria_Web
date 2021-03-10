@@ -2,27 +2,27 @@
 
 @section('contenido')
 <!-- <div class="shadow-lg p-3 mb-5 bg-white rounded"><h3>Contenido de INDEX</h3></div> -->
-<h2 class="referencia">Propiedades Agregadas</h2>
-        <div class ="card">
+<h2 class="Referencia">Propiedades Agregadas</h2>
+        <div class ="Card">
         <a href="Propiedad/create" class="menu-btn"  style="color:#FFF;font-size:15px;font-weight: bold;">CREAR</a>
           <div class="container">
-     <table id="table" class="table" >
+     <table id="table" class="Table" >
     <thead class="fila">
     <tr>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">ID</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Propiedad</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Tipo De Documento</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Numero De Documento</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Celular</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Manzana</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Lote</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Numero De Suministro</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Tipo De Propiedad</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Fecha De Inscripcion</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Pago Mensual</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Pago Por Reconeccion</th>
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Estado</th> 
-      <th style="color:#fff;font-size:11px;font-weight: bold;">Acciones</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">ID</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Propiedad</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Tipo De Documento</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Numero De Documento</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Celular</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Manzana</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Lote</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Numero De Suministro</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Tipo De Propiedad</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Fecha De Inscripcion</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Pago Mensual</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Pago Por Reconeccion</th>
+      <th style="color:#fff;font-size:15px;font-weight: bold;">Estado</th> 
+      <th style="color:#fff;font-size:19px;font-weight: bold;">Acciones</th>
     </tr>
   </thead>
   <tbody>    
@@ -47,10 +47,10 @@
         <td>{{$lista_propiedad->Estado}}</td>
         <td>  
         <form action="{{ route('Propiedad.destroy',$lista_propiedad->id) }}" method="POST">
-            <a href="/Propiedad/{{$lista_propiedad->id}}/edit" class="btn btn-info" style="color:#FFF;font-size:15px;font-weight: bold;">Editar</a>
+            <a href="/Propiedad/{{$lista_propiedad->id}}/edit" class="Btn-info" style="color:#FFF;font-size:10px;font-weight: bold;">Editar</a>
             @csrf
               @method('DELETE')
-            <button class="btn btn-danger" style="color:#FFF;font-size:15px;font-weight: bold;">Borrar</button>
+            <button class=" btn-Danger" style="color:#FFF;font-size:10px;font-weight: bold;">Borrar</button>
             </form>  
         </td>        
     </tr>
